@@ -8,8 +8,70 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"net/url"
 	"time"
+
+	httpbuilder "github.com/rolniuq/mypackage/http-builder"
 )
+
+const (
+	scheme        = "https"
+	host          = "ads.line.me"
+	accessKey     = "NtrT8kVWRaSjbXlP"
+	secretKey     = "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+	urlParameters = ""
+)
+
+type Sample struct{}
+
+func (s *Sample) makeUrl(path string) (*url.URL, error) {
+	urlStr := fmt.Sprintf("%s://%s%s%s", scheme, host, urlParameters)
+
+	u, err := url.Parse(urlStr)
+	if err != nil {
+		return nil, err
+	}
+
+	return u, nil
+}
+
+type Response struct{}
+
+func (s *Sample) sendRequest(url *url.URL) (*Response, error) {
+	op := &httpbuilder.Ops{}
+	req, err := httpbuilder.
+		NewHttpRequestBuilder(
+			*op.WithUrl(url),
+		).
+		Build()
+	if err != nil {
+		return nil, err
+	}
+
+	res, err := httpbuilder.Send[Response](req)
+	if err != nil {
+		return nil, err
+	}
+
+	return res, nil
+}
+
+func (s *Sample) CreateGroup() error {
+	path := "/api/v3/groups/G1/children"
+	url, err := s.makeUrl(path)
+	if err != nil {
+		return err
+	}
+
+	res, err := s.sendRequest(url)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println(res)
+
+	return nil
+}
 
 func calcSHA256Digest(content string) string {
 	hash := sha256.New()
@@ -22,11 +84,6 @@ func encodeWithBase64(value []byte) string {
 }
 
 func Run() {
-	accessKey := "NtrT8kVWRaSjbXlP"
-	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
-	method := "POST"
-	canonicalURL := "/api/v3/groups/G1/children"
-	urlParameters := ""
 	requestBody := map[string]string{"name": "test"}
 	hasRequestBody := requestBody != nil
 
@@ -69,7 +126,7 @@ func Run() {
 	}
 
 	client := &http.Client{}
-	req, err := http.NewRequest(method, endpoint, bytes.NewBuffer(requestBodyJSON))
+	req, err := http.NewRequest("POST", endpoint, bytes.NewBuffer(requestBodyJSON))
 	if err != nil {
 		fmt.Println("Failed to create HTTP request:", err)
 		return
