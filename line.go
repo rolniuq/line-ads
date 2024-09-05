@@ -12,8 +12,8 @@ const (
 	host         = "ads.line.me"
 	basePath     = "api"
 	scheme       = "https"
-	clientId     = "NtrT8kVWRaSjbXlP"
-	clientSecret = "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+	clientId     = "2006159961"
+	clientSecret = "735c548e1ebd9ba8e4ee17b531ca30d6"
 	authCode     = "123"
 	redirectUrl  = "http://localhost:3000/callback"
 )

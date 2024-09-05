@@ -20,12 +20,13 @@ const (
 	accessKey     = "NtrT8kVWRaSjbXlP"
 	secretKey     = "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
 	urlParameters = ""
+	canonicalURL  = ""
 )
 
 type Sample struct{}
 
 func (s *Sample) makeUrl(path string) (*url.URL, error) {
-	urlStr := fmt.Sprintf("%s://%s%s%s", scheme, host, urlParameters)
+	urlStr := fmt.Sprintf("%s://%s%s%s", scheme, host, path, urlParameters)
 
 	u, err := url.Parse(urlStr)
 	if err != nil {
@@ -57,7 +58,7 @@ func (s *Sample) sendRequest(url *url.URL) (*Response, error) {
 }
 
 func (s *Sample) CreateGroup() error {
-	path := "/api/v3/groups/G1/children"
+	path := "/api/v3/groups/G08916310298/children"
 	url, err := s.makeUrl(path)
 	if err != nil {
 		return err

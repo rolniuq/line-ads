@@ -1,10 +1,13 @@
 package main
 
-import "line-ads/sample"
+import (
+	"line-ads/test"
+)
 
 func main() {
-	sample.Run()
+	// sample.ReadGroups()
+	test.CreateChildGroup()
 
-	l := NewLineClient()
-	l.Auth()
+	// l := NewLineClient()
+	// l.Auth()
 }
