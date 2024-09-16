@@ -7,6 +7,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"line-ads/configs"
 	"net/http"
 	"net/url"
 	"time"
@@ -14,11 +15,13 @@ import (
 	httpbuilder "github.com/rolniuq/mypackage/http-builder"
 )
 
-const (
+var config = configs.ConfigMod.Resolve()
+
+var (
 	scheme        = "https"
 	host          = "ads.line.me"
-	accessKey     = "NtrT8kVWRaSjbXlP"
-	secretKey     = "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+	accessKey     = config.ClientId
+	secretKey     = config.ClientSecret
 	urlParameters = ""
 	canonicalURL  = ""
 )

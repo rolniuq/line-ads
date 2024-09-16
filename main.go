@@ -1,13 +1,9 @@
 package main
 
-import (
-	"line-ads/test"
-)
+import lineads "line-ads/builder"
 
 func main() {
-	// sample.ReadGroups()
-	test.CreateChildGroup()
+	client := lineads.NewLineAdsService("accessKey", "secretKey")
 
-	// l := NewLineClient()
-	// l.Auth()
+	client.CreateCampaign("accountId")
 }
