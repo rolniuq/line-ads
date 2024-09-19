@@ -1,20 +1,10 @@
 package main
 
-import (
-	"fmt"
-	"line-ads/test"
-)
+import "line-ads/sample"
 
 func main() {
-	// sample.ReadGroups()
-	// test.CreateChildGroup()
+	sample.ReadGroups()
 
-	// l := NewLineClient()
-	// l.Auth()
-
-	// test.GetListAdsAccounts()
-	err := test.SendLinkRequest()
-	if err != nil {
-		fmt.Errorf("failed to send link request: %v", err)
-	}
+	l := NewLineClient()
+	l.Auth()
 }
