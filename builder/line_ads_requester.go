@@ -9,6 +9,7 @@ import (
 	"io"
 	"line-ads/utils"
 	"net/http"
+	"net/url"
 	"time"
 )
 
@@ -29,7 +30,12 @@ func (s *LineAdsRequestParameters) String() string {
 		return ""
 	}
 
-	return fmt.Sprint(*s)
+	values := url.Values{}
+	for k, v := range *s {
+		values.Add(k, v)
+	}
+
+	return values.Encode()
 }
 
 const (
