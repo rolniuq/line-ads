@@ -85,6 +85,10 @@ func (s *LineAdsRequest[T]) WithParameters(parameters LineAdsRequestParameters) 
 }
 
 func (s *LineAdsRequest[T]) getEndpoint() string {
+	if s == nil || s.parameters == nil {
+		return s.url
+	}
+
 	return fmt.Sprintf("%s?%s", s.url, s.parameters.String())
 }
 
@@ -180,6 +184,9 @@ func (s *LineAdsRequest[T]) Build() (*T, error) {
 		return nil, fmt.Errorf("failed to send request: %v", err)
 	}
 	defer res.Body.Close()
+	if res.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("failed to send request: %s", res.Status)
+	}
 
 	body, err := io.ReadAll(res.Body)
 	if err != nil {
