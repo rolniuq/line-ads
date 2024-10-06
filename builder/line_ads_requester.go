@@ -101,9 +101,43 @@ func (s *LineAdsRequest[T]) getRequestBody() ([]byte, error) {
 	return res, nil
 }
 
+func (s *LineAdsRequest[T]) getPayloadStr() (*string, error) {
+	if s == nil || s.body == nil {
+		return nil, nil
+	}
+
+	reqBody, err := json.Marshal(s.body)
+	if err != nil {
+		return nil, err
+	}
+
+	hexDigest := utils.CalcSHA256Digest(string(reqBody))
+
+	payloadDate := time.Now().UTC().Format("20060102")
+
+	contentType, err := s.getContentType()
+	if err != nil {
+		return nil, err
+	}
+
+	canonicalURL := s.getEndpoint()
+
+	payload := fmt.Sprintf("%s\n%s\n%s\n%s", hexDigest, contentType, payloadDate, canonicalURL)
+
+	return &payload, nil
+}
+
 func (s *LineAdsRequest[T]) getToken() string {
+	payload, err := s.getPayloadStr()
+	if err != nil {
+		return ""
+	}
+	if payload == nil {
+		return ""
+	}
+
 	jwsHeader := utils.EncodeWithBase64([]byte(fmt.Sprintf(`{"alg":"HS256","kid":"%s","typ":"text/plain"}`, s.accessKey)))
-	jwsPayload := ""
+	jwsPayload := utils.EncodeWithBase64([]byte(*payload))
 
 	signingInput := fmt.Sprintf("%s.%s", jwsHeader, jwsPayload)
 	signature := hmac.New(sha256.New, []byte(s.secretKey))

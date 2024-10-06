@@ -1,6 +1,7 @@
 package lineads
 
 import (
+	"line-ads/configs"
 	"net/url"
 	"testing"
 
@@ -8,11 +9,8 @@ import (
 )
 
 func Test_LineAdsRequester_getEndpoint(t *testing.T) {
-	clientId := ""
-	clientSecret := ""
-
-	endpoint := NewLineAdsRequest[any](clientId, clientSecret).
-		WithUrl("https://api.line.me/v2/bot/message/push").
+	endpoint := NewLineAdsRequest[any](configs.ClientId, configs.ClientSecret).
+		WithUrl("https://api.line.me/v3/groups").
 		WithParameters(LineAdsRequestParameters{
 			GROUPS: "G08916310298",
 		}).
@@ -22,5 +20,11 @@ func Test_LineAdsRequester_getEndpoint(t *testing.T) {
 
 	url, err := url.Parse(endpoint)
 	require.NoError(t, err)
-	require.Equal(t, "https://api.line.me/v2/bot/message/push?groups=G08916310298", url.String())
+	require.Equal(t, "https://api.line.me/v3/groups?groups=G08916310298", url.String())
+}
+
+func Test_LineAdsRequester_getToken(t *testing.T) {
+	token := NewLineAdsRequest[any](configs.ClientId, configs.ClientSecret).getToken()
+
+	require.NotNil(t, token)
 }
