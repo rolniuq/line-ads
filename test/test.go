@@ -22,7 +22,7 @@ func encodeWithBase64(value []byte) string {
 	return base64.URLEncoding.EncodeToString(value)
 }
 
-func CreateChildGroup() {
+func CreateChildGroup() error {
 	// Setting parameters for your request
 	accessKey := "NtrT8kVWRaSjbXlP"
 	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
@@ -58,14 +58,22 @@ func CreateChildGroup() {
 	req, _ := http.NewRequest(method, endpoint, bytes.NewBuffer(requestBodyJSON))
 	req.Header = httpHeaders
 
-	resp, _ := http.DefaultClient.Do(req)
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return err
+	}
 	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("status code error: %d %s", resp.StatusCode, resp.Status)
+	}
 
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
+
+	return nil
 }
 
-func GetChildGroups() {
+func GetChildGroups() error {
 	// Setting parameters for your request
 	accessKey := "NtrT8kVWRaSjbXlP"
 	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
@@ -101,18 +109,26 @@ func GetChildGroups() {
 	req, _ := http.NewRequest(method, endpoint, bytes.NewBuffer(requestBodyJSON))
 	req.Header = httpHeaders
 
-	resp, _ := http.DefaultClient.Do(req)
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return err
+	}
 	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("received non-OK HTTP status %s", resp.Status)
+	}
 
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
+
+	return nil
 }
 
-func GetListAdsAccounts() {
+func GetListAdsAccounts() error {
 	accessKey := "NtrT8kVWRaSjbXlP"
 	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
 	method := "GET"
-	canonicalURL := "/api/v3/groups/G08916310298/adaccounts"
+	canonicalURL := "/api/v3/groups/G01679313261/adaccounts"
 	urlParameters := ""
 	requestBody := ""
 	// hasRequestBody := requestBody != nil
@@ -143,11 +159,19 @@ func GetListAdsAccounts() {
 	req, _ := http.NewRequest(method, endpoint, bytes.NewBuffer(requestBodyJSON))
 	req.Header = httpHeaders
 
-	resp, _ := http.DefaultClient.Do(req)
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return err
+	}
 	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("received non-OK HTTP status %s", resp.Status)
+	}
 
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
+
+	return nil
 }
 
 type Status string
@@ -170,23 +194,19 @@ func SendLinkRequest() error {
 	accessKey := "NtrT8kVWRaSjbXlP"
 	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
 	method := "POST"
-	canonicalURL := "/api/v3/groups/G08916310298/link-request/adaccount"
+	canonicalURL := "/api/v3/groups/G01679313261/link-request/adaccount"
 	urlParameters := ""
 	requestBody := &LinkRequest{
-		Id:                  100,
-		SourceGroupId:       "G72287315356",
+		Id:                  101,
+		SourceGroupId:       "G01679313261",
 		SourceGroupName:     "test group",
 		TargetAdaccountId:   "A08655312340",
 		TargetAdaccountName: "Quynh",
 		Status:              LINKED,
 	}
-	// hasRequestBody := requestBody != nil
 
 	endpoint := "https://ads.line.me" + canonicalURL + urlParameters
-	requestBodyJSON, err := json.Marshal(requestBody)
-	if err != nil {
-		return fmt.Errorf("failed to marshal request body: %v", err)
-	}
+	requestBodyJSON, _ := json.Marshal(requestBody)
 	contentType := "application/json"
 
 	jwsHeader := encodeWithBase64([]byte(fmt.Sprintf(`{"alg":"HS256","kid":"%s","typ":"text/plain"}`, accessKey)))
@@ -210,20 +230,23 @@ func SendLinkRequest() error {
 
 	req, err := http.NewRequest(method, endpoint, bytes.NewBuffer(requestBodyJSON))
 	if err != nil {
-		return fmt.Errorf("failed to create request: %v", err)
+		return err
 	}
 	req.Header = httpHeaders
 
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
-		return fmt.Errorf("failed to send request: %v", err)
+		return err
 	}
 	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		buf := new(bytes.Buffer)
+		buf.ReadFrom(resp.Body)
 
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		return fmt.Errorf("failed to read response body: %v", err)
+		return fmt.Errorf("status code error: %v", buf.String())
 	}
+
+	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(string(body))
 
 	return nil
@@ -275,6 +298,9 @@ func GetLinkRequest() error {
 		return fmt.Errorf("failed to send request: %v", err)
 	}
 	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("failed to send request: %s", resp.Status)
+	}
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {

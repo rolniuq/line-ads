@@ -12,10 +12,16 @@ func TestSendLinkRequest(t *testing.T) {
 }
 
 func TestGetGroups(t *testing.T) {
-	GetChildGroups()
+	err := GetChildGroups()
+	require.NoError(t, err)
 }
 
 func TestGetAdsAccount(t *testing.T) {
-	err := GetLinkRequest()
+	err := GetListAdsAccounts()
+	require.NoError(t, err)
+}
+
+func TestCreateChildGroup(t *testing.T) {
+	err := CreateChildGroup()
 	require.NoError(t, err)
 }

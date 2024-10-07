@@ -92,6 +92,19 @@ func (s *LineAdsRequest[T]) getEndpoint() string {
 	return fmt.Sprintf("%s?%s", s.url, s.parameters.String())
 }
 
+func (s *LineAdsRequest[T]) getPath() (*string, error) {
+	if s == nil || s.url == "" {
+		return nil, nil
+	}
+
+	url, err := url.Parse(s.url)
+	if err != nil {
+		return nil, err
+	}
+
+	return &url.Path, nil
+}
+
 func (s *LineAdsRequest[T]) getRequestBody() ([]byte, error) {
 	res, err := json.Marshal(s.body)
 	if err != nil {
@@ -111,18 +124,23 @@ func (s *LineAdsRequest[T]) getPayloadStr() (*string, error) {
 		return nil, err
 	}
 
-	hexDigest := utils.CalcSHA256Digest(string(reqBody))
-
-	payloadDate := time.Now().UTC().Format("20060102")
-
 	contentType, err := s.getContentType()
 	if err != nil {
 		return nil, err
 	}
 
-	canonicalURL := s.getEndpoint()
+	path, err := s.getPath()
+	if err != nil {
+		return nil, err
+	}
+	if path == nil {
+		return nil, fmt.Errorf("path is required")
+	}
 
-	payload := fmt.Sprintf("%s\n%s\n%s\n%s", hexDigest, contentType, payloadDate, canonicalURL)
+	hexDigest := utils.CalcSHA256Digest(string(reqBody))
+	payloadDate := time.Now().UTC().Format("20060102")
+
+	payload := fmt.Sprintf("%s\n%s\n%s\n%s", hexDigest, contentType, payloadDate, *path)
 
 	return &payload, nil
 }
@@ -218,13 +236,14 @@ func (s *LineAdsRequest[T]) Build() (*T, error) {
 		return nil, fmt.Errorf("failed to send request: %v", err)
 	}
 	defer res.Body.Close()
-	if res.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("failed to send request: %s", res.Status)
-	}
 
 	body, err := io.ReadAll(res.Body)
 	if err != nil {
 		return nil, fmt.Errorf("failed to read response body: %v", err)
+	}
+
+	if res.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("failed to send request: %s", string(body))
 	}
 
 	var data T

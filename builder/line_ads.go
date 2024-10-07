@@ -34,7 +34,7 @@ func (s *LineAdsService) CreateGroup(_ context.Context, req ReqCreateGroupDto) (
 }
 
 func (s *LineAdsService) SendLinkRequest(_ context.Context, req ReqCreateLinkRequestDto) (*ResCreateLinkRequestDto, error) {
-	path := fmt.Sprintf("/%s/%s/%s/%s", GROUPS, req.SourceGroupID, LINK_REQUEST, AD_ACCOUNT)
+	path := fmt.Sprintf("%s/%s/%s/%s", GROUPS, req.SourceGroupID, LINK_REQUEST, AD_ACCOUNT)
 	res, err := MakeRequest[ReqCreateLinkRequestDto, ResCreateLinkRequestDto](s.lineAdsBuilder, req, POST, nil, path).Build()
 	if err != nil {
 		return nil, fmt.Errorf("failed to send link request: %v", err)
