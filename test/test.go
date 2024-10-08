@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -128,8 +129,8 @@ func GetListAdsAccounts() error {
 	accessKey := "NtrT8kVWRaSjbXlP"
 	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
 	method := "GET"
-	canonicalURL := "/api/v3/groups/G01679313261/adaccounts"
-	urlParameters := ""
+	canonicalURL := "/api/v3/groups/G08916310298/adaccounts"
+	urlParameters := "?includeRemoved=false"
 	requestBody := ""
 	// hasRequestBody := requestBody != nil
 
@@ -169,6 +170,7 @@ func GetListAdsAccounts() error {
 	}
 
 	body, _ := ioutil.ReadAll(resp.Body)
+	os.WriteFile("list-ads-accounts.json", body, 0644)
 	fmt.Println(string(body))
 
 	return nil
@@ -200,7 +202,7 @@ func SendLinkRequest() error {
 		Id:                  101,
 		SourceGroupId:       "G01679313261",
 		SourceGroupName:     "test group",
-		TargetAdaccountId:   "A08655312340",
+		TargetAdaccountId:   "A43859314796",
 		TargetAdaccountName: "Quynh",
 		Status:              LINKED,
 	}
@@ -306,6 +308,8 @@ func GetLinkRequest() error {
 	if err != nil {
 		return fmt.Errorf("failed to read response body: %v", err)
 	}
+
+	os.WriteFile("link-requests.json", body, 0644)
 	fmt.Println(string(body))
 
 	return nil

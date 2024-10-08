@@ -25,3 +25,8 @@ func TestCreateChildGroup(t *testing.T) {
 	err := CreateChildGroup()
 	require.NoError(t, err)
 }
+
+func TestGetLinkRequest(t *testing.T) {
+	err := GetLinkRequest()
+	require.NoError(t, err)
+}

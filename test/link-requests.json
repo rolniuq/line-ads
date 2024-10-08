@@ -1,0 +1,102 @@
+{
+  "paging": {
+    "page": 1,
+    "size": 100,
+    "totalElements": 9,
+    "sorts": ["createdDate,DESC"]
+  },
+  "datas": [
+    {
+      "id": 286372,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A49799313413",
+      "targetAdaccountName": "quynh11 - Auditions",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-07T09:29:28Z",
+      "modifiedDate": "2024-10-07T09:30:41Z"
+    },
+    {
+      "id": 286362,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A22699313473",
+      "targetAdaccountName": "quynh - Auditions",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-07T09:07:55Z",
+      "modifiedDate": "2024-10-07T09:30:48Z"
+    },
+    {
+      "id": 286358,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A80199313441",
+      "targetAdaccountName": "qyuynh - qyuynh",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-07T08:57:40Z",
+      "modifiedDate": "2024-10-07T09:30:54Z"
+    },
+    {
+      "id": 286307,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A29689313863",
+      "targetAdaccountName": "quyhn - quyhn",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-07T07:26:28Z",
+      "modifiedDate": "2024-10-07T10:22:41Z"
+    },
+    {
+      "id": 286305,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A76589313862",
+      "status": "WAITING_APPROVAL",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-07T07:24:47Z"
+    },
+    {
+      "id": 286304,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A40489313822",
+      "status": "WAITING_APPROVAL",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-07T07:22:25Z"
+    },
+    {
+      "id": 286301,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A81189313831",
+      "status": "WAITING_APPROVAL",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-07T07:18:20Z"
+    },
+    {
+      "id": 284418,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A52735312169",
+      "targetAdaccountName": "サングローブ株式会社 - IT・ソフトウェア",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-09-19T08:17:41Z"
+    },
+    {
+      "id": 283964,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A08655312340",
+      "targetAdaccountName": "サングローブ株式会社 - IT・ソフトウェア",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-09-16T11:02:27Z",
+      "modifiedDate": "2024-09-19T08:10:33Z"
+    }
+  ]
+}
