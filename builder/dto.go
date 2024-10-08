@@ -18,3 +18,11 @@ type ReqCreateLinkRequestDto struct {
 
 type ResCreateLinkRequestDto struct {
 }
+
+type ReqGetLinkRequestsDto struct {
+	GroupID string
+}
+
+type ResGetLinkRequestsDto struct {
+	Datas []LinkRequest `json:"datas"`
+}
