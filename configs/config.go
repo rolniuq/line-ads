@@ -1,6 +1,23 @@
 package configs
 
-const (
-	ClientId     = "NtrT8kVWRaSjbXlP"
-	ClientSecret = "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+import (
+	"github.com/spf13/viper"
+	"github.com/submodule-org/submodule.go/v2"
 )
+
+type Config struct {
+	ClientID     string
+	ClientSecret string
+}
+
+var ConfigMod = submodule.Make[*Config](func() (*Config, error) {
+	viper.SetConfigFile("./config.yaml")
+	if err := viper.ReadInConfig(); err != nil {
+		return nil, err
+	}
+
+	return &Config{
+		ClientID:     viper.GetString("line.client_key"),
+		ClientSecret: viper.GetString("line.client_secret"),
+	}, nil
+})
