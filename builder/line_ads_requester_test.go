@@ -9,6 +9,8 @@ import (
 )
 
 func Test_LineAdsRequester_getEndpoint(t *testing.T) {
+	configs := configs.ConfigMod.Resolve()
+
 	endpoint := NewLineAdsRequest[any](configs.ClientId, configs.ClientSecret).
 		WithUrl("https://api.line.me/v3/groups").
 		WithParameters(LineAdsRequestParameters{
@@ -24,6 +26,8 @@ func Test_LineAdsRequester_getEndpoint(t *testing.T) {
 }
 
 func Test_LineAdsRequester_getToken(t *testing.T) {
+	configs := configs.ConfigMod.Resolve()
+
 	token := NewLineAdsRequest[any](configs.ClientId, configs.ClientSecret).getToken()
 
 	require.NotNil(t, token)

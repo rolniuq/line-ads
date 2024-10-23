@@ -9,6 +9,8 @@ import (
 )
 
 func TestSendLinkInvite(t *testing.T) {
+	configs := configs.ConfigMod.Resolve()
+
 	lineService := NewLineAdsService(configs.ClientId, configs.ClientSecret)
 
 	ctx := context.Background()

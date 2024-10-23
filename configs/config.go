@@ -6,7 +6,7 @@ import (
 )
 
 type Config struct {
-	ClientID     string
+	ClientId     string
 	ClientSecret string
 }
 
@@ -17,7 +17,7 @@ var ConfigMod = submodule.Make[*Config](func() (*Config, error) {
 	}
 
 	return &Config{
-		ClientID:     viper.GetString("line.client_key"),
+		ClientId:     viper.GetString("line.client_key"),
 		ClientSecret: viper.GetString("line.client_secret"),
 	}, nil
 })
