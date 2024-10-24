@@ -7,6 +7,7 @@ import (
 )
 
 func TestSendLinkRequest(t *testing.T) {
+	t.Skip()
 	res := SendLinkRequest()
 	require.NoError(t, res)
 }

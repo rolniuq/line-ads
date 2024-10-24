@@ -1,6 +1,9 @@
 package configs
 
 import (
+	"fmt"
+	"line-ads/pkgs/path"
+
 	"github.com/spf13/viper"
 	"github.com/submodule-org/submodule.go/v2"
 )
@@ -11,7 +14,8 @@ type Config struct {
 }
 
 var ConfigMod = submodule.Make[*Config](func() (*Config, error) {
-	viper.SetConfigFile("./config.yaml")
+	root := path.RootDir()
+	viper.SetConfigFile(fmt.Sprintf("%s/config.yaml", root))
 	if err := viper.ReadInConfig(); err != nil {
 		return nil, err
 	}

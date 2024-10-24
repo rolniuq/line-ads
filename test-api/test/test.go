@@ -8,10 +8,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"line-ads/configs"
 	"net/http"
-	"os"
 	"time"
 )
+
+var config = configs.ConfigMod.Resolve()
 
 func calcSHA256Digest(content string) string {
 	hash := sha256.New()
@@ -25,8 +27,8 @@ func encodeWithBase64(value []byte) string {
 
 func CreateChildGroup() error {
 	// Setting parameters for your request
-	accessKey := "NtrT8kVWRaSjbXlP"
-	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+	accessKey := config.ClientId
+	secretKey := config.ClientSecret
 	method := "POST"
 	canonicalURL := "/api/v3/groups/G08916310298/children"
 	urlParameters := ""
@@ -76,8 +78,8 @@ func CreateChildGroup() error {
 
 func GetChildGroups() error {
 	// Setting parameters for your request
-	accessKey := "NtrT8kVWRaSjbXlP"
-	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+	accessKey := config.ClientId
+	secretKey := config.ClientSecret
 	method := "GET"
 	canonicalURL := "/api/v3/groups/G08916310298/children"
 	urlParameters := ""
@@ -126,8 +128,8 @@ func GetChildGroups() error {
 }
 
 func GetListAdsAccounts() error {
-	accessKey := "NtrT8kVWRaSjbXlP"
-	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+	accessKey := config.ClientId
+	secretKey := config.ClientSecret
 	method := "GET"
 	canonicalURL := "/api/v3/groups/G08916310298/adaccounts"
 	urlParameters := "?includeRemoved=false"
@@ -170,7 +172,6 @@ func GetListAdsAccounts() error {
 	}
 
 	body, _ := ioutil.ReadAll(resp.Body)
-	os.WriteFile("list-ads-accounts.json", body, 0644)
 	fmt.Println(string(body))
 
 	return nil
@@ -193,8 +194,8 @@ type LinkRequest struct {
 
 func SendLinkRequest() error {
 	// Setting parameters for your request
-	accessKey := "NtrT8kVWRaSjbXlP"
-	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+	accessKey := config.ClientId
+	secretKey := config.ClientSecret
 	method := "POST"
 	canonicalURL := "/api/v3/groups/G01679313261/link-request/adaccount"
 	urlParameters := ""
@@ -255,8 +256,8 @@ func SendLinkRequest() error {
 }
 
 func GetLinkRequest() error {
-	accessKey := "NtrT8kVWRaSjbXlP"
-	secretKey := "0LUGh35uBen6d7E5AKUyOHFxy1ebP9zv"
+	accessKey := config.ClientId
+	secretKey := config.ClientSecret
 	method := "GET"
 	canonicalURL := "/api/v3/groups/G08916310298/link-request"
 	urlParameters := ""
@@ -309,7 +310,6 @@ func GetLinkRequest() error {
 		return fmt.Errorf("failed to read response body: %v", err)
 	}
 
-	os.WriteFile("link-requests.json", body, 0644)
 	fmt.Println(string(body))
 
 	return nil
