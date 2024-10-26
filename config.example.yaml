@@ -5,3 +5,4 @@ server:
 line:
   client_key: ""
   client_secret: ""
+  group_id: ""
