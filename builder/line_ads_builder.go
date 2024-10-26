@@ -1,6 +1,9 @@
 package lineads
 
-import "fmt"
+import (
+	"context"
+	"fmt"
+)
 
 const (
 	host       = "ads.line.me"
@@ -11,25 +14,26 @@ const (
 
 type LineAdsBuilder struct {
 	accessKey  string
+	apiVersion string
 	basePath   string
 	host       string
 	scheme     string
 	secretKey  string
-	apiVersion string
 }
 
 func NewLineAdsBuilder(accessKey, secretKey string) *LineAdsBuilder {
 	return &LineAdsBuilder{
 		accessKey:  accessKey,
+		apiVersion: apiVersion,
 		basePath:   basePath,
 		host:       host,
 		scheme:     scheme,
 		secretKey:  secretKey,
-		apiVersion: apiVersion,
 	}
 }
 
 func MakeRequest[T, U any](
+	ctx context.Context,
 	s *LineAdsBuilder,
 	body T,
 	method LineAdsRequestMethod,
@@ -41,6 +45,7 @@ func MakeRequest[T, U any](
 	}
 
 	req := NewLineAdsRequest[U](s.accessKey, s.secretKey).
+		WithContext(ctx).
 		WithBody(body).
 		WithMethod(method).
 		WithUrl(fmt.Sprintf("%s://%s/%s/%s/%s", s.scheme, s.host, s.basePath, s.apiVersion, path)).

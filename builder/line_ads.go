@@ -7,7 +7,9 @@ import (
 
 const (
 	AD_ACCOUNT   = "adaccount"
+	AD_ACCOUNTS  = "adaccounts"
 	CAMPAIGN     = "campaign"
+	CHILDREN     = "children"
 	GROUPS       = "groups"
 	LINK_REQUEST = "link-request"
 )
@@ -24,29 +26,38 @@ func NewLineAdsService(accessKey, secretKey string) *LineAdsService {
 	}
 }
 
-func (s *LineAdsService) CreateGroup(_ context.Context, req ReqCreateGroupDto) (*ResCreateGroupDto, error) {
-	res, err := MakeRequest[ReqCreateGroupDto, ResCreateGroupDto](s.lineAdsBuilder, req, POST, nil, GROUPS).Build()
+func (s *LineAdsService) SendLinkRequest(ctx context.Context, req ReqCreateLinkRequestDto) (*ResCreateLinkRequestDto, error) {
+	res, err := MakeRequest[ReqCreateLinkRequestDto, ResCreateLinkRequestDto](ctx, s.lineAdsBuilder, req, POST, nil, req.GetPath()).Build()
 	if err != nil {
-		return nil, fmt.Errorf("failed to create group: %v", err)
+		return nil, err
 	}
 
 	return res, nil
 }
 
-func (s *LineAdsService) SendLinkRequest(_ context.Context, req ReqCreateLinkRequestDto) (*ResCreateLinkRequestDto, error) {
-	path := fmt.Sprintf("%s/%s/%s/%s", GROUPS, req.SourceGroupID, LINK_REQUEST, AD_ACCOUNT)
-	res, err := MakeRequest[ReqCreateLinkRequestDto, ResCreateLinkRequestDto](s.lineAdsBuilder, req, POST, nil, path).Build()
+func (s *LineAdsService) CreateCampaign(ctx context.Context, accountId string) error {
+	return nil
+}
+
+func (s *LineAdsService) GetCampaigns(ctx context.Context, accountId string) error {
+	return nil
+}
+
+func (s *LineAdsService) GetAdAccounts(ctx context.Context, req ReqGetAdAccountsDto) (*ResGetAdAccountsDto, error) {
+	path := fmt.Sprintf("%s/%s/%s", GROUPS, req.GroupID, AD_ACCOUNTS)
+	res, err := MakeRequest[ReqGetAdAccountsDto, ResGetAdAccountsDto](ctx, s.lineAdsBuilder, req, GET, nil, path).Build()
 	if err != nil {
-		return nil, fmt.Errorf("failed to send link request: %v", err)
+		return nil, fmt.Errorf("failed to get ad accounts: %v", err)
 	}
 
 	return res, nil
 }
 
-func (s *LineAdsService) CreateCampaign(accountId string) error {
-	return nil
-}
+func (s *LineAdsService) GetLinkRequests(ctx context.Context, req ReqGetLinkRequestsDto) (*ResGetLinkRequestsDto, error) {
+	res, err := MakeRequest[ReqGetLinkRequestsDto, ResGetLinkRequestsDto](ctx, s.lineAdsBuilder, req, GET, req.GetParameters(), req.GetPath()).Build()
+	if err != nil {
+		return nil, err
+	}
 
-func (s *LineAdsService) GetCampaigns(accountId string) error {
-	return nil
+	return res, nil
 }

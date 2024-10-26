@@ -2,6 +2,7 @@ package lineads
 
 import (
 	"bytes"
+	"context"
 	"crypto/hmac"
 	"crypto/sha256"
 	"encoding/json"
@@ -11,6 +12,10 @@ import (
 	"net/http"
 	"net/url"
 	"time"
+)
+
+const (
+	APPLICATION_JSON = "application/json"
 )
 
 type LineAdsRequestMethod string
@@ -44,6 +49,7 @@ const (
 )
 
 type LineAdsRequest[T any] struct {
+	ctx        context.Context
 	accessKey  string
 	body       any
 	method     LineAdsRequestMethod
@@ -58,6 +64,12 @@ func NewLineAdsRequest[T any](accessKey, secretKey string) *LineAdsRequest[T] {
 		secretKey:  secretKey,
 		parameters: make(LineAdsRequestParameters),
 	}
+}
+
+func (s *LineAdsRequest[T]) WithContext(ctx context.Context) *LineAdsRequest[T] {
+	s.ctx = ctx
+
+	return s
 }
 
 func (s *LineAdsRequest[T]) WithBody(body any) *LineAdsRequest[T] {
@@ -175,7 +187,7 @@ func (s *LineAdsRequest[T]) getContentType() (string, error) {
 		return "", nil
 	}
 
-	return "application/json", nil
+	return APPLICATION_JSON, nil
 }
 
 func (s *LineAdsRequest[T]) getHeaders(t time.Time) (map[string][]string, error) {
@@ -209,7 +221,6 @@ func (s *LineAdsRequest[T]) makeRequest(t time.Time) (*http.Request, error) {
 	if body == nil {
 		return nil, fmt.Errorf("request body is required")
 	}
-
 	req, err := http.NewRequest(string(s.method), endpoint, bytes.NewBuffer(body))
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %v", err)
@@ -228,27 +239,26 @@ func (s *LineAdsRequest[T]) makeRequest(t time.Time) (*http.Request, error) {
 func (s *LineAdsRequest[T]) Build() (*T, error) {
 	req, err := s.makeRequest(time.Now())
 	if err != nil {
-		return nil, fmt.Errorf("failed to build request: %v", err)
+		return nil, err
 	}
 
 	res, err := http.DefaultClient.Do(req)
 	if err != nil {
-		return nil, fmt.Errorf("failed to send request: %v", err)
+		return nil, err
 	}
 	defer res.Body.Close()
 
 	body, err := io.ReadAll(res.Body)
 	if err != nil {
-		return nil, fmt.Errorf("failed to read response body: %v", err)
+		return nil, err
 	}
 
 	if res.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("failed to send request: %s", string(body))
+		return nil, s.getError(body)
 	}
-
 	var data T
 	if err := json.Unmarshal(body, &data); err != nil {
-		return nil, fmt.Errorf("failed to unmarshal response body: %v", err)
+		return nil, err
 	}
 
 	return &data, nil
