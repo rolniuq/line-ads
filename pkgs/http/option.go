@@ -38,3 +38,23 @@ func (w withBody) Apply(s *internal.DialSettings) {
 func WithBody(body internal.HttpBody) Option {
 	return withBody(body)
 }
+
+func GetDialSettings(ops []Option) *internal.DialSettings {
+	res := &internal.DialSettings{}
+
+	for _, op := range ops {
+		if op == nil {
+			continue
+		}
+
+		op.Apply(res)
+	}
+
+	return res
+}
+
+func GetDefaultSettings() *internal.DialSettings {
+	return &internal.DialSettings{
+		Method: internal.GET,
+	}
+}

@@ -7,5 +7,12 @@ type httpClient struct {
 }
 
 func NewHttpClient(url string, ops ...Option) *httpClient {
-	return &httpClient{}
+	settings := GetDialSettings(ops)
+	if settings == nil {
+		settings = GetDefaultSettings()
+	}
+
+	return &httpClient{
+		settings: *settings,
+	}
 }
