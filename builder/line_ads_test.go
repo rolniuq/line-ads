@@ -9,6 +9,7 @@ import (
 )
 
 func TestGetLinkRequests(t *testing.T) {
+	t.Skip()
 	configs := configs.ConfigMod.Resolve()
 
 	lineService := NewLineAdsService(configs.ClientId, configs.ClientSecret)

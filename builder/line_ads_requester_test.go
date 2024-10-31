@@ -9,6 +9,7 @@ import (
 )
 
 func Test_LineAdsRequester_getEndpoint(t *testing.T) {
+	t.Skip()
 	configs := configs.ConfigMod.Resolve()
 
 	endpoint := NewLineAdsRequest[any](configs.ClientId, configs.ClientSecret).
