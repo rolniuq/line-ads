@@ -39,6 +39,16 @@ func WithBody(body internal.HttpBody) Option {
 	return withBody(body)
 }
 
+type withTimeOut int
+
+func (w withTimeOut) Apply(s *internal.DialSettings) {
+	s.TimeOut = int(w)
+}
+
+func WithTimeOut(t int) Option {
+	return withTimeOut(t)
+}
+
 func GetDialSettings(ops []Option) *internal.DialSettings {
 	res := &internal.DialSettings{}
 

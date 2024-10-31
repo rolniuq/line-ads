@@ -15,8 +15,9 @@ const (
 type HttpBody map[string]any
 
 type DialSettings struct {
-	Url    string
-	Header http.Header
-	Body   HttpBody
-	Method HttpMethod
+	Url     string
+	Header  http.Header
+	Body    HttpBody
+	Method  HttpMethod
+	TimeOut int
 }
