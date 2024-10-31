@@ -22,5 +22,8 @@ jobs:
       - name: Install dependencies
         run: go mod tidy
 
+      - name: Copy config
+        run: cp config.example.yaml config.yaml
+
       - name: Run test
         run: go test ./...
