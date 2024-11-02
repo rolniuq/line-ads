@@ -8,7 +8,7 @@ import (
 	"github.com/submodule-org/submodule.go/v2"
 )
 
-var LoggerMod = submodule.Make[Logger](func() *Logger {
+var LoggerMod = submodule.Make[*Logger](func() *Logger {
 	return newLogger()
 })
 
@@ -40,6 +40,6 @@ func (l *Logger) Info(msg string) {
 	l.logger.Println(Green, msg)
 }
 
-func (l *Logger) Warning(msg string) {
-	l.logger.Println(Yellow, msg)
+func (l *Logger) Warning(msg string, args ...any) {
+	l.logger.Println(Yellow, msg, args)
 }

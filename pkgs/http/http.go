@@ -6,21 +6,29 @@ import (
 	"io"
 	"line-ads/internal"
 	"net/http"
+	"net/url"
 	"time"
 )
 
 type httpClient struct {
-	settings internal.DialSettings
+	url      *url.URL
+	settings *internal.DialSettings
 }
 
-func NewHttpClient(url string, ops ...Option) *httpClient {
+func NewHttpClient(urlStr string, ops ...Option) *httpClient {
 	settings := GetDialSettings(ops)
 	if settings == nil {
 		settings = GetDefaultSettings()
 	}
 
+	url, err := url.Parse(urlStr)
+	if err != nil {
+		return nil
+	}
+
 	return &httpClient{
-		settings: *settings,
+		settings: settings,
+		url:      url,
 	}
 }
 
@@ -35,15 +43,16 @@ func (c *httpClient) makeRequest() (*http.Request, error) {
 		body = bytes.NewBuffer(b)
 	}
 
-	req, err := http.NewRequest(c.settings.Url, string(c.settings.Method), body)
+	req, err := http.NewRequest(string(c.settings.Method), c.url.String(), body)
 	if err != nil {
 		return nil, err
 	}
+	req.Header = c.settings.Header
 
 	return req, nil
 }
 
-func Do[Req, Res any](httpClient *httpClient) (*Res, any) {
+func Do[Res any](httpClient *httpClient) (*Res, error) {
 	req, err := httpClient.makeRequest()
 	if err != nil {
 		return nil, err
@@ -59,7 +68,7 @@ func Do[Req, Res any](httpClient *httpClient) (*Res, any) {
 	}
 	defer res.Body.Close()
 
-	body, err := io.ReadAll(req.Body)
+	body, err := io.ReadAll(res.Body)
 	if err != nil {
 		return nil, err
 	}
