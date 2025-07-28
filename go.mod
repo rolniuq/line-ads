@@ -6,6 +6,7 @@ toolchain go1.23.1
 
 require (
 	github.com/bytedance/sonic v1.14.0
+	github.com/google/uuid v1.6.0
 	github.com/rolniuq/mypackage v1.1.3
 	github.com/samber/lo v1.47.0
 	github.com/spf13/viper v1.18.2
