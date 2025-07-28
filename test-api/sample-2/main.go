@@ -5,18 +5,21 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"line-ads/utils"
 	"net/http"
 	"net/url"
 	"os"
 )
 
 var (
-	clientID      = "2006159961"
-	clientSecret  = "735c548e1ebd9ba8e4ee17b531ca30d6"
-	redirectURI   = "http://localhost:3000/callback"
+	// clientID      = "2006159961"
+	clientID = "2007829527"
+	// clientSecret  = "735c548e1ebd9ba8e4ee17b531ca30d6"
+	clientSecret  = "a97c609ff67ee2e14ee7e8227d4984d3"
+	redirectURI   = "http://localhost:8080/callback"
 	authEndpoint  = "https://access.line.me/oauth2/v2.1/authorize"
 	state         = "YOUR_STATE"
-	scope         = "profile%20openid%20email"
+	scope         = "profile openid email"
 	tokenEndpoint = "https://api.line.me/oauth2/v2.1/token"
 )
 
@@ -25,8 +28,8 @@ var (
 func main() {
 	http.HandleFunc("/", handleLogin)
 	http.HandleFunc("/callback", handleCallback)
-	fmt.Println("Server started at http://localhost:3000")
-	http.ListenAndServe(":3000", nil)
+	fmt.Println("Server started at http://localhost:8080")
+	http.ListenAndServe(":8080", nil)
 }
 
 func handleLogin(w http.ResponseWriter, r *http.Request) {
@@ -54,6 +57,8 @@ func handleCallback(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, fmt.Sprintf("Failed to get user profile: %v", err), http.StatusInternalServerError)
 		return
 	}
+
+	utils.WriteFile("profile.json", profile)
 
 	getLineAds(accessToken, profile.UserId)
 

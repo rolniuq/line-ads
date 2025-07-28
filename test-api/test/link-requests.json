@@ -2,101 +2,842 @@
   "paging": {
     "page": 1,
     "size": 100,
-    "totalElements": 9,
+    "totalElements": 83,
     "sorts": ["createdDate,DESC"]
   },
   "datas": [
     {
-      "id": 286372,
+      "id": 304560,
       "sourceGroupId": "G08916310298",
       "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A49799313413",
-      "targetAdaccountName": "quynh11 - Auditions",
+      "targetAdaccountId": "A26231332166",
+      "targetAdaccountName": "124rfewfew - Shrines and temples",
       "status": "LINKED",
       "targetType": "ADACCOUNT",
-      "createdDate": "2024-10-07T09:29:28Z",
-      "modifiedDate": "2024-10-07T09:30:41Z"
+      "createdDate": "2025-02-21T09:07:39Z",
+      "modifiedDate": "2025-02-21T09:07:51Z"
     },
     {
-      "id": 286362,
+      "id": 304559,
       "sourceGroupId": "G08916310298",
       "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A22699313473",
-      "targetAdaccountName": "quynh - Auditions",
-      "status": "LINKED",
+      "targetAdaccountId": "A26231332166",
+      "status": "REJECTED",
       "targetType": "ADACCOUNT",
-      "createdDate": "2024-10-07T09:07:55Z",
-      "modifiedDate": "2024-10-07T09:30:48Z"
+      "createdDate": "2025-02-21T09:03:35Z",
+      "modifiedDate": "2025-02-21T09:03:47Z"
     },
     {
-      "id": 286358,
+      "id": 303798,
       "sourceGroupId": "G08916310298",
       "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A80199313441",
-      "targetAdaccountName": "qyuynh - qyuynh",
-      "status": "LINKED",
-      "targetType": "ADACCOUNT",
-      "createdDate": "2024-10-07T08:57:40Z",
-      "modifiedDate": "2024-10-07T09:30:54Z"
-    },
-    {
-      "id": 286307,
-      "sourceGroupId": "G08916310298",
-      "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A29689313863",
-      "targetAdaccountName": "quyhn - quyhn",
-      "status": "LINKED",
-      "targetType": "ADACCOUNT",
-      "createdDate": "2024-10-07T07:26:28Z",
-      "modifiedDate": "2024-10-07T10:22:41Z"
-    },
-    {
-      "id": 286305,
-      "sourceGroupId": "G08916310298",
-      "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A76589313862",
+      "targetAdaccountId": "A30861330289",
       "status": "WAITING_APPROVAL",
       "targetType": "ADACCOUNT",
-      "createdDate": "2024-10-07T07:24:47Z"
+      "createdDate": "2025-02-19T10:24:39Z"
     },
     {
-      "id": 286304,
+      "id": 303796,
       "sourceGroupId": "G08916310298",
       "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A40489313822",
+      "targetAdaccountId": "A30861330289",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2025-02-19T10:21:15Z",
+      "modifiedDate": "2025-02-19T10:22:21Z"
+    },
+    {
+      "id": 303791,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A30861330289",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2025-02-19T10:16:56Z",
+      "modifiedDate": "2025-02-19T10:17:09Z"
+    },
+    {
+      "id": 303790,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A27431330528",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2025-02-19T10:14:53Z",
+      "modifiedDate": "2025-02-19T10:17:24Z"
+    },
+    {
+      "id": 303787,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A44838326946",
       "status": "WAITING_APPROVAL",
       "targetType": "ADACCOUNT",
-      "createdDate": "2024-10-07T07:22:25Z"
+      "createdDate": "2025-02-19T10:07:34Z"
     },
     {
-      "id": 286301,
+      "id": 303537,
       "sourceGroupId": "G08916310298",
       "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A81189313831",
+      "targetAdaccountId": "A27431330528",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2025-02-19T02:52:31Z",
+      "modifiedDate": "2025-02-19T10:14:13Z"
+    },
+    {
+      "id": 301024,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A27079326615",
       "status": "WAITING_APPROVAL",
       "targetType": "ADACCOUNT",
-      "createdDate": "2024-10-07T07:18:20Z"
+      "createdDate": "2025-02-03T09:17:57Z"
     },
     {
-      "id": 284418,
+      "id": 298704,
       "sourceGroupId": "G08916310298",
       "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A52735312169",
-      "targetAdaccountName": "サングローブ株式会社 - IT・ソフトウェア",
-      "status": "LINKED",
+      "targetAdaccountId": "A53667328315",
+      "status": "WAITING_APPROVAL",
       "targetType": "ADACCOUNT",
-      "createdDate": "2024-09-19T08:17:41Z"
+      "createdDate": "2025-01-13T09:35:59Z"
     },
     {
-      "id": 283964,
+      "id": 298703,
       "sourceGroupId": "G08916310298",
       "sourceGroupName": "easier ads",
-      "targetAdaccountId": "A08655312340",
-      "targetAdaccountName": "サングローブ株式会社 - IT・ソフトウェア",
+      "targetAdaccountId": "A64567328174",
+      "status": "WAITING_APPROVAL",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2025-01-13T09:24:32Z"
+    },
+    {
+      "id": 297390,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A27336321147",
+      "status": "WAITING_APPROVAL",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-12-24T08:24:46Z"
+    },
+    {
+      "id": 297376,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A83560326821",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-12-24T07:42:49Z",
+      "modifiedDate": "2025-02-19T01:59:08Z"
+    },
+    {
+      "id": 297375,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A27980326637",
+      "status": "WAITING_APPROVAL",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-12-24T07:41:13Z"
+    },
+    {
+      "id": 297373,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A40061325066",
+      "targetAdaccountName": "Easier - Theme parks and leisure facilities",
       "status": "LINKED",
       "targetType": "ADACCOUNT",
-      "createdDate": "2024-09-16T11:02:27Z",
-      "modifiedDate": "2024-09-19T08:10:33Z"
+      "createdDate": "2024-12-24T07:32:22Z",
+      "modifiedDate": "2024-12-24T07:32:42Z"
+    },
+    {
+      "id": 295578,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A23614328634",
+      "targetAdaccountName": "test - Sports facilities",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-12-09T03:14:00Z",
+      "modifiedDate": "2024-12-09T03:14:16Z"
+    },
+    {
+      "id": 295576,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A23614328634",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-12-09T03:13:26Z",
+      "modifiedDate": "2024-12-09T03:13:46Z"
+    },
+    {
+      "id": 293598,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A93923326935",
+      "targetAdaccountName": "C L A I R - Shrines and temples",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-25T09:43:10Z",
+      "modifiedDate": "2024-11-25T09:43:23Z"
+    },
+    {
+      "id": 293597,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A93923326935",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-25T09:41:30Z",
+      "modifiedDate": "2024-11-25T09:42:57Z"
+    },
+    {
+      "id": 293596,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A58623326945",
+      "targetAdaccountName": "B R Y A N - Auto supplies",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-25T09:41:05Z",
+      "modifiedDate": "2024-11-25T09:42:19Z"
+    },
+    {
+      "id": 292590,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A90893321072",
+      "targetAdaccountName": "https://admanager.line.biz/adaccount/create/ - Restaurants, bars, and cafes",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-20T07:36:50Z",
+      "modifiedDate": "2024-11-20T07:37:33Z"
+    },
+    {
+      "id": 290924,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A87762320404",
+      "targetAdaccountName": "clair - Cosmetic treatments",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-08T09:54:05Z",
+      "modifiedDate": "2024-11-08T09:54:17Z"
+    },
+    {
+      "id": 290921,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A87762320404",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-08T09:52:39Z",
+      "modifiedDate": "2024-11-08T09:53:56Z"
+    },
+    {
+      "id": 290699,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A87762320404",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T06:47:36Z",
+      "modifiedDate": "2024-11-08T02:47:44Z"
+    },
+    {
+      "id": 290696,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A88462320413",
+      "targetAdaccountName": "clair - Theme parks and leisure facilities",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T06:43:19Z",
+      "modifiedDate": "2024-11-07T06:43:32Z"
+    },
+    {
+      "id": 290695,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A88462320413",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T06:42:54Z",
+      "modifiedDate": "2024-11-07T06:43:07Z"
+    },
+    {
+      "id": 290693,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A68511322217",
+      "targetAdaccountName": "BryanOTD - Real estate",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T06:38:35Z",
+      "modifiedDate": "2024-11-07T06:39:24Z"
+    },
+    {
+      "id": 290688,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A02852320148",
+      "targetAdaccountName": "quynhlor - Auditions",
+      "status": "LINKED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T06:29:42Z",
+      "modifiedDate": "2024-11-07T06:29:52Z"
+    },
+    {
+      "id": 290687,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A02852320148",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T06:28:38Z",
+      "modifiedDate": "2024-11-07T06:29:16Z"
+    },
+    {
+      "id": 290657,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A02852320148",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T03:55:27Z",
+      "modifiedDate": "2024-11-07T03:55:45Z"
+    },
+    {
+      "id": 290652,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A02852320148",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T03:12:56Z",
+      "modifiedDate": "2024-11-07T03:14:50Z"
+    },
+    {
+      "id": 290648,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A24452320147",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-07T03:06:15Z",
+      "modifiedDate": "2024-11-07T03:07:13Z"
+    },
+    {
+      "id": 290595,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A68511322217",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-06T09:55:01Z",
+      "modifiedDate": "2024-11-06T10:04:19Z"
+    },
+    {
+      "id": 290544,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A04481329122",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-06T08:35:44Z",
+      "modifiedDate": "2024-11-06T08:36:00Z"
+    },
+    {
+      "id": 290542,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A04481329122",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-06T08:34:07Z",
+      "modifiedDate": "2024-11-06T08:34:48Z"
+    },
+    {
+      "id": 290262,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A92351325017",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-04T09:42:09Z",
+      "modifiedDate": "2024-11-04T09:48:22Z"
+    },
+    {
+      "id": 290261,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A92351325017",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-04T09:21:55Z",
+      "modifiedDate": "2024-11-04T09:23:28Z"
+    },
+    {
+      "id": 290258,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A92351325017",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-04T09:07:07Z",
+      "modifiedDate": "2024-11-04T09:21:46Z"
+    },
+    {
+      "id": 290257,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A92351325017",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-04T09:05:33Z",
+      "modifiedDate": "2024-11-04T09:06:38Z"
+    },
+    {
+      "id": 290235,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A92351325017",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-04T03:46:10Z",
+      "modifiedDate": "2024-11-04T09:04:55Z"
+    },
+    {
+      "id": 290153,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A40061325066",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-01T10:36:33Z",
+      "modifiedDate": "2024-11-01T10:36:46Z"
+    },
+    {
+      "id": 290053,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A16241325883",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-01T07:27:52Z",
+      "modifiedDate": "2024-11-01T07:40:01Z"
+    },
+    {
+      "id": 290052,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A27980326637",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-01T07:25:06Z",
+      "modifiedDate": "2024-11-01T07:25:25Z"
+    },
+    {
+      "id": 290050,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A16241325883",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-11-01T07:20:33Z",
+      "modifiedDate": "2024-11-01T07:26:59Z"
+    },
+    {
+      "id": 289077,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A45350328804",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-24T07:41:00Z",
+      "modifiedDate": "2024-10-24T07:41:20Z"
+    },
+    {
+      "id": 289046,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A17750328398",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-24T06:25:34Z",
+      "modifiedDate": "2024-10-24T06:25:55Z"
+    },
+    {
+      "id": 289042,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A01340328704",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-24T06:21:10Z",
+      "modifiedDate": "2024-10-24T06:21:48Z"
+    },
+    {
+      "id": 288848,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A23970327484",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T08:36:17Z",
+      "modifiedDate": "2024-10-23T08:36:39Z"
+    },
+    {
+      "id": 288846,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A03670327474",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T08:27:30Z",
+      "modifiedDate": "2024-10-23T08:28:34Z"
+    },
+    {
+      "id": 288842,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A94670327352",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T08:10:04Z",
+      "modifiedDate": "2024-10-23T08:10:22Z"
+    },
+    {
+      "id": 288809,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A27980326637",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T05:32:11Z",
+      "modifiedDate": "2024-11-01T07:22:02Z"
+    },
+    {
+      "id": 288783,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A45850327530",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T03:12:41Z",
+      "modifiedDate": "2024-10-23T03:13:11Z"
+    },
+    {
+      "id": 288782,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A27980326637",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T03:11:54Z",
+      "modifiedDate": "2024-10-23T03:12:24Z"
+    },
+    {
+      "id": 288779,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A10550327570",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T03:08:28Z",
+      "modifiedDate": "2024-10-23T03:08:42Z"
+    },
+    {
+      "id": 288767,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A39250327327",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T02:29:15Z",
+      "modifiedDate": "2024-10-23T02:29:40Z"
+    },
+    {
+      "id": 288764,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A05250327256",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T02:19:15Z",
+      "modifiedDate": "2024-10-23T02:20:08Z"
+    },
+    {
+      "id": 288756,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A61650327034",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T02:05:33Z",
+      "modifiedDate": "2024-10-23T02:08:42Z"
+    },
+    {
+      "id": 288754,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A61650327034",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-23T01:46:11Z",
+      "modifiedDate": "2024-10-23T01:46:30Z"
+    },
+    {
+      "id": 288632,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A27980326637",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-22T08:04:33Z",
+      "modifiedDate": "2024-10-22T08:04:50Z"
+    },
+    {
+      "id": 288480,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A83560326821",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-22T03:32:17Z",
+      "modifiedDate": "2024-10-22T03:44:28Z"
+    },
+    {
+      "id": 288479,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A83560326821",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-22T03:31:47Z",
+      "modifiedDate": "2024-10-22T03:32:09Z"
+    },
+    {
+      "id": 288470,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A83560326821",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-22T03:24:52Z",
+      "modifiedDate": "2024-10-22T03:30:58Z"
+    },
+    {
+      "id": 288444,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A83560326821",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-22T02:58:11Z",
+      "modifiedDate": "2024-10-22T02:58:33Z"
+    },
+    {
+      "id": 288269,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A59300326670",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-21T09:45:51Z",
+      "modifiedDate": "2024-10-21T09:46:09Z"
+    },
+    {
+      "id": 288267,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A59300326670",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-21T09:41:41Z",
+      "modifiedDate": "2024-10-21T09:41:53Z"
+    },
+    {
+      "id": 288016,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A06340323667",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-18T09:28:14Z",
+      "modifiedDate": "2024-10-18T09:28:57Z"
+    },
+    {
+      "id": 287441,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A52560321298",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-16T06:25:31Z",
+      "modifiedDate": "2024-10-16T06:25:48Z"
+    },
+    {
+      "id": 286856,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A84449316326",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T06:27:09Z",
+      "modifiedDate": "2024-10-10T06:27:31Z"
+    },
+    {
+      "id": 286842,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A10739316710",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T04:37:24Z",
+      "modifiedDate": "2024-10-10T04:37:37Z"
+    },
+    {
+      "id": 286808,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A47939316121",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T03:01:53Z",
+      "modifiedDate": "2024-10-10T03:02:06Z"
+    },
+    {
+      "id": 286805,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A47939316121",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T03:01:18Z",
+      "modifiedDate": "2024-10-10T03:01:46Z"
+    },
+    {
+      "id": 286803,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A47939316121",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T03:00:47Z",
+      "modifiedDate": "2024-10-10T03:01:16Z"
+    },
+    {
+      "id": 286801,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A08839316131",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T02:59:18Z",
+      "modifiedDate": "2024-10-10T02:59:43Z"
+    },
+    {
+      "id": 286798,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A45829316917",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T02:54:01Z",
+      "modifiedDate": "2024-10-10T02:54:07Z"
+    },
+    {
+      "id": 286786,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A45829316917",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T02:37:08Z",
+      "modifiedDate": "2024-10-10T02:53:55Z"
+    },
+    {
+      "id": 286785,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A45829316917",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T02:36:51Z",
+      "modifiedDate": "2024-10-10T02:37:02Z"
+    },
+    {
+      "id": 286784,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A45829316917",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T02:34:51Z",
+      "modifiedDate": "2024-10-10T02:36:44Z"
+    },
+    {
+      "id": 286781,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A45829316917",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T02:28:05Z",
+      "modifiedDate": "2024-10-10T02:34:45Z"
+    },
+    {
+      "id": 286779,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A45829316917",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-10T02:25:39Z",
+      "modifiedDate": "2024-10-10T02:25:51Z"
+    },
+    {
+      "id": 286713,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A53169315869",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-09T09:18:33Z",
+      "modifiedDate": "2024-10-09T10:28:40Z"
+    },
+    {
+      "id": 286495,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A21069314457",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-08T06:51:49Z",
+      "modifiedDate": "2024-10-10T03:15:37Z"
+    },
+    {
+      "id": 286431,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A43859314796",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-08T02:44:43Z",
+      "modifiedDate": "2024-10-08T02:44:55Z"
+    },
+    {
+      "id": 286430,
+      "sourceGroupId": "G08916310298",
+      "sourceGroupName": "easier ads",
+      "targetAdaccountId": "A43859314796",
+      "status": "REJECTED",
+      "targetType": "ADACCOUNT",
+      "createdDate": "2024-10-08T02:44:22Z",
+      "modifiedDate": "2024-10-08T02:44:40Z"
     }
   ]
 }

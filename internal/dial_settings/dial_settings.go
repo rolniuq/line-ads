@@ -1,4 +1,4 @@
-package internal
+package ds
 
 import "net/http"
 

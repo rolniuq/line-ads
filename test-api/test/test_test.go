@@ -7,7 +7,7 @@ import (
 )
 
 func TestSendLinkRequest(t *testing.T) {
-	t.Skip()
+	// t.Skip()
 	res := SendLinkRequest()
 	require.NoError(t, res)
 }
@@ -19,7 +19,7 @@ func TestGetGroups(t *testing.T) {
 }
 
 func TestGetAdsAccount(t *testing.T) {
-	t.Skip()
+	// t.Skip()
 	err := GetListAdsAccounts()
 	require.NoError(t, err)
 }
@@ -31,7 +31,7 @@ func TestCreateChildGroup(t *testing.T) {
 }
 
 func TestGetLinkRequest(t *testing.T) {
-	t.Skip()
+	// t.Skip()
 	err := GetLinkRequest()
 	require.NoError(t, err)
 }

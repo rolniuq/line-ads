@@ -1,1 +1,174 @@
-{"paging":{"page":1,"size":100,"totalElements":6,"sorts":["createdDate,DESC"]},"datas":[{"id":"A49799313413","name":"quynh11 - Auditions","availableCampaignObjective":["VISIT_MY_WEBSITE","WEBSITE_CONVERSION","APP_INSTALL","APP_ENGAGEMENT","VIDEO_VIEW","REACH","GAIN_FRIENDS","DYNAMIC_PRODUCT"],"currency":"JPY","timezone":"Asia/Tokyo","country":"JP","lineAccount":{"name":"LINE","lineId":"@line"},"productType":"PERFORMANCE","configuredStatus":"ACTIVE","deliveryStatus":"NOT_DELIVERING","deliveryStatusReasons":[{"code":"BILLING_NO_CREDIT_CARD"},{"code":"ADACCOUNT_REVIEW_IN_REVIEW"},{"code":"LINE_ACCOUNT_LINK_NOT_APPROVED"}],"createdDate":"2024-10-07T18:07:10+09:00","modifiedDate":"2024-10-07T18:07:10+09:00"},{"id":"A22699313473","name":"quynh - Auditions","availableCampaignObjective":["VISIT_MY_WEBSITE","WEBSITE_CONVERSION","APP_INSTALL","APP_ENGAGEMENT","VIDEO_VIEW","REACH","GAIN_FRIENDS","DYNAMIC_PRODUCT"],"currency":"JPY","timezone":"Asia/Tokyo","country":"JP","lineAccount":{"name":"LINE","lineId":"@line"},"productType":"PERFORMANCE","configuredStatus":"ACTIVE","deliveryStatus":"NOT_DELIVERING","deliveryStatusReasons":[{"code":"BILLING_NO_CREDIT_CARD"},{"code":"ADACCOUNT_REVIEW_IN_REVIEW"},{"code":"LINE_ACCOUNT_LINK_NOT_APPROVED"}],"createdDate":"2024-10-07T18:06:23+09:00","modifiedDate":"2024-10-07T18:06:23+09:00"},{"id":"A80199313441","name":"qyuynh - qyuynh","availableCampaignObjective":["VISIT_MY_WEBSITE","WEBSITE_CONVERSION","APP_INSTALL","APP_ENGAGEMENT","VIDEO_VIEW","REACH","GAIN_FRIENDS","DYNAMIC_PRODUCT"],"currency":"JPY","timezone":"Asia/Tokyo","country":"JP","lineAccount":{"name":"LINE","lineId":"@line"},"productType":"PERFORMANCE","configuredStatus":"ACTIVE","deliveryStatus":"NOT_DELIVERING","deliveryStatusReasons":[{"code":"BILLING_NO_CREDIT_CARD"},{"code":"ADACCOUNT_REVIEW_IN_REVIEW"},{"code":"LINE_ACCOUNT_LINK_NOT_APPROVED"}],"createdDate":"2024-10-07T17:57:30+09:00","modifiedDate":"2024-10-07T17:57:30+09:00"},{"id":"A29689313863","name":"quyhn - quyhn","availableCampaignObjective":["VISIT_MY_WEBSITE","WEBSITE_CONVERSION","APP_INSTALL","APP_ENGAGEMENT","VIDEO_VIEW","REACH","GAIN_FRIENDS","DYNAMIC_PRODUCT"],"currency":"JPY","timezone":"Asia/Tokyo","country":"JP","lineAccount":{"name":"LINE","lineId":"@line"},"productType":"PERFORMANCE","configuredStatus":"ACTIVE","deliveryStatus":"NOT_DELIVERING","deliveryStatusReasons":[{"code":"BILLING_NO_CREDIT_CARD"},{"code":"ADACCOUNT_REVIEW_IN_REVIEW"},{"code":"LINE_ACCOUNT_LINK_NOT_APPROVED"}],"createdDate":"2024-10-07T16:26:19+09:00","modifiedDate":"2024-10-07T16:26:19+09:00"},{"id":"A08655312340","name":"サングローブ株式会社 - IT・ソフトウェア","availableCampaignObjective":["VISIT_MY_WEBSITE","WEBSITE_CONVERSION","APP_INSTALL","APP_ENGAGEMENT","VIDEO_VIEW","REACH","DYNAMIC_PRODUCT"],"currency":"JPY","timezone":"Asia/Tokyo","country":"JP","lineAccount":{"name":"サングローブ株式会社","lineId":"@615plorx"},"productType":"PERFORMANCE","configuredStatus":"ACTIVE","deliveryStatus":"NOT_DELIVERING","deliveryStatusReasons":[{"code":"BILLING_NO_CREDIT_CARD"},{"code":"ADACCOUNT_REVIEW_IN_REVIEW"}],"createdDate":"2024-08-20T19:49:19+09:00","modifiedDate":"2024-08-20T19:49:19+09:00"},{"id":"A52735312169","name":"サングローブ株式会社 - IT・ソフトウェア","availableCampaignObjective":["VISIT_MY_WEBSITE","WEBSITE_CONVERSION","APP_INSTALL","APP_ENGAGEMENT","VIDEO_VIEW","REACH","DYNAMIC_PRODUCT"],"currency":"JPY","timezone":"Asia/Tokyo","country":"JP","lineAccount":{"name":"サングローブ株式会社","lineId":"@189ptumf"},"productType":"PERFORMANCE","configuredStatus":"ACTIVE","deliveryStatus":"NOT_DELIVERING","deliveryStatusReasons":[{"code":"BILLING_NO_CREDIT_CARD"},{"code":"ADACCOUNT_REVIEW_IN_REVIEW"}],"createdDate":"2024-08-20T13:44:32+09:00","modifiedDate":"2024-08-20T13:44:33+09:00"}]}
+{
+  "paging": {
+    "page": 1,
+    "size": 100,
+    "totalElements": 6,
+    "sorts": ["createdDate,DESC"]
+  },
+  "datas": [
+    {
+      "id": "A49799313413",
+      "name": "quynh11 - Auditions",
+      "availableCampaignObjective": [
+        "VISIT_MY_WEBSITE",
+        "WEBSITE_CONVERSION",
+        "APP_INSTALL",
+        "APP_ENGAGEMENT",
+        "VIDEO_VIEW",
+        "REACH",
+        "GAIN_FRIENDS",
+        "DYNAMIC_PRODUCT"
+      ],
+      "currency": "JPY",
+      "timezone": "Asia/Tokyo",
+      "country": "JP",
+      "lineAccount": { "name": "LINE", "lineId": "@line" },
+      "productType": "PERFORMANCE",
+      "configuredStatus": "ACTIVE",
+      "deliveryStatus": "NOT_DELIVERING",
+      "deliveryStatusReasons": [
+        { "code": "BILLING_NO_CREDIT_CARD" },
+        { "code": "ADACCOUNT_REVIEW_IN_REVIEW" },
+        { "code": "LINE_ACCOUNT_LINK_NOT_APPROVED" }
+      ],
+      "createdDate": "2024-10-07T18:07:10+09:00",
+      "modifiedDate": "2024-10-07T18:07:10+09:00"
+    },
+    {
+      "id": "A22699313473",
+      "name": "quynh - Auditions",
+      "availableCampaignObjective": [
+        "VISIT_MY_WEBSITE",
+        "WEBSITE_CONVERSION",
+        "APP_INSTALL",
+        "APP_ENGAGEMENT",
+        "VIDEO_VIEW",
+        "REACH",
+        "GAIN_FRIENDS",
+        "DYNAMIC_PRODUCT"
+      ],
+      "currency": "JPY",
+      "timezone": "Asia/Tokyo",
+      "country": "JP",
+      "lineAccount": { "name": "LINE", "lineId": "@line" },
+      "productType": "PERFORMANCE",
+      "configuredStatus": "ACTIVE",
+      "deliveryStatus": "NOT_DELIVERING",
+      "deliveryStatusReasons": [
+        { "code": "BILLING_NO_CREDIT_CARD" },
+        { "code": "ADACCOUNT_REVIEW_IN_REVIEW" },
+        { "code": "LINE_ACCOUNT_LINK_NOT_APPROVED" }
+      ],
+      "createdDate": "2024-10-07T18:06:23+09:00",
+      "modifiedDate": "2024-10-07T18:06:23+09:00"
+    },
+    {
+      "id": "A80199313441",
+      "name": "qyuynh - qyuynh",
+      "availableCampaignObjective": [
+        "VISIT_MY_WEBSITE",
+        "WEBSITE_CONVERSION",
+        "APP_INSTALL",
+        "APP_ENGAGEMENT",
+        "VIDEO_VIEW",
+        "REACH",
+        "GAIN_FRIENDS",
+        "DYNAMIC_PRODUCT"
+      ],
+      "currency": "JPY",
+      "timezone": "Asia/Tokyo",
+      "country": "JP",
+      "lineAccount": { "name": "LINE", "lineId": "@line" },
+      "productType": "PERFORMANCE",
+      "configuredStatus": "ACTIVE",
+      "deliveryStatus": "NOT_DELIVERING",
+      "deliveryStatusReasons": [
+        { "code": "BILLING_NO_CREDIT_CARD" },
+        { "code": "ADACCOUNT_REVIEW_IN_REVIEW" },
+        { "code": "LINE_ACCOUNT_LINK_NOT_APPROVED" }
+      ],
+      "createdDate": "2024-10-07T17:57:30+09:00",
+      "modifiedDate": "2024-10-07T17:57:30+09:00"
+    },
+    {
+      "id": "A29689313863",
+      "name": "quyhn - quyhn",
+      "availableCampaignObjective": [
+        "VISIT_MY_WEBSITE",
+        "WEBSITE_CONVERSION",
+        "APP_INSTALL",
+        "APP_ENGAGEMENT",
+        "VIDEO_VIEW",
+        "REACH",
+        "GAIN_FRIENDS",
+        "DYNAMIC_PRODUCT"
+      ],
+      "currency": "JPY",
+      "timezone": "Asia/Tokyo",
+      "country": "JP",
+      "lineAccount": { "name": "LINE", "lineId": "@line" },
+      "productType": "PERFORMANCE",
+      "configuredStatus": "ACTIVE",
+      "deliveryStatus": "NOT_DELIVERING",
+      "deliveryStatusReasons": [
+        { "code": "BILLING_NO_CREDIT_CARD" },
+        { "code": "ADACCOUNT_REVIEW_IN_REVIEW" },
+        { "code": "LINE_ACCOUNT_LINK_NOT_APPROVED" }
+      ],
+      "createdDate": "2024-10-07T16:26:19+09:00",
+      "modifiedDate": "2024-10-07T16:26:19+09:00"
+    },
+    {
+      "id": "A08655312340",
+      "name": "サングローブ株式会社 - IT・ソフトウェア",
+      "availableCampaignObjective": [
+        "VISIT_MY_WEBSITE",
+        "WEBSITE_CONVERSION",
+        "APP_INSTALL",
+        "APP_ENGAGEMENT",
+        "VIDEO_VIEW",
+        "REACH",
+        "DYNAMIC_PRODUCT"
+      ],
+      "currency": "JPY",
+      "timezone": "Asia/Tokyo",
+      "country": "JP",
+      "lineAccount": { "name": "サングローブ株式会社", "lineId": "@615plorx" },
+      "productType": "PERFORMANCE",
+      "configuredStatus": "ACTIVE",
+      "deliveryStatus": "NOT_DELIVERING",
+      "deliveryStatusReasons": [
+        { "code": "BILLING_NO_CREDIT_CARD" },
+        { "code": "ADACCOUNT_REVIEW_IN_REVIEW" }
+      ],
+      "createdDate": "2024-08-20T19:49:19+09:00",
+      "modifiedDate": "2024-08-20T19:49:19+09:00"
+    },
+    {
+      "id": "A52735312169",
+      "name": "サングローブ株式会社 - IT・ソフトウェア",
+      "availableCampaignObjective": [
+        "VISIT_MY_WEBSITE",
+        "WEBSITE_CONVERSION",
+        "APP_INSTALL",
+        "APP_ENGAGEMENT",
+        "VIDEO_VIEW",
+        "REACH",
+        "DYNAMIC_PRODUCT"
+      ],
+      "currency": "JPY",
+      "timezone": "Asia/Tokyo",
+      "country": "JP",
+      "lineAccount": { "name": "サングローブ株式会社", "lineId": "@189ptumf" },
+      "productType": "PERFORMANCE",
+      "configuredStatus": "ACTIVE",
+      "deliveryStatus": "NOT_DELIVERING",
+      "deliveryStatusReasons": [
+        { "code": "BILLING_NO_CREDIT_CARD" },
+        { "code": "ADACCOUNT_REVIEW_IN_REVIEW" }
+      ],
+      "createdDate": "2024-08-20T13:44:32+09:00",
+      "modifiedDate": "2024-08-20T13:44:33+09:00"
+    }
+  ]
+}

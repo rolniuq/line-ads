@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"io"
-	"line-ads/internal"
+	ds "line-ads/internal/dial_settings"
 	"net/http"
 	"net/url"
 	"time"
@@ -12,7 +12,7 @@ import (
 
 type httpClient struct {
 	url      *url.URL
-	settings *internal.DialSettings
+	settings *ds.DialSettings
 }
 
 func NewHttpClient(urlStr string, ops ...Option) *httpClient {

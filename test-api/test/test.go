@@ -10,6 +10,7 @@ import (
 	"io/ioutil"
 	"line-ads/configs"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -311,6 +312,8 @@ func GetLinkRequest() error {
 	}
 
 	fmt.Println(string(body))
+
+	os.WriteFile("link-requests.json", body, 0644)
 
 	return nil
 }
